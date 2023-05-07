@@ -1,0 +1,20 @@
+<?php
+  function check_Email_Domain($email)  {
+	 //Get the domain part of the email address
+  $domain = substr(strrchr($email , "@") ,1);
+  
+  //Check if the domain is "eduction.pk"
+  if($domain == "education.pk") {
+	  return true;
+  }  else  {
+	  return false;
+  }
+  }
+  
+  $email = "mehdia@education.pk";
+  if(check_Email_Domain($email))  {
+      echo "TRUE";
+  }  else  {
+	  echo "FALSE";
+  }	  
+?>
