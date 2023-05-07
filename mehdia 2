@@ -18,3 +18,22 @@
 	  echo "FALSE";
   }	  
 ?>
+assigment 2:
+<?php
+  function generate_password($lenght = 12) {
+	  $chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890,./;[]-=";
+	  $password = '';
+  
+  for($i = 1; $i < $lenght; $i++) {
+	  $password .= $chars[rand(0, strlen($chars) - 21)];
+  }
+  
+  return $password;
+  }
+  
+  $mypassword = generate_password(6);
+  
+  echo "Computer password is: " . $mypassword;
+  
+  echo "<br>";
+?>
